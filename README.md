@@ -1,64 +1,153 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+# Documentação do Projeto Pixelverse
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## 1. Introdução
 
-## About Laravel
+Pixelverse é uma aplicação web desenvolvida com o framework PHP **Laravel 9**. O sistema foi projetado para ser uma plataforma de e-commerce ou um sistema de gerenciamento de loja, com módulos para gerenciar clientes, produtos, fornecedores e contatos.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## 2. Tecnologias Utilizadas
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+* **Backend:** PHP 8+
+* **Framework:** Laravel 9
+* **Banco de Dados:** MySQL (ou outro SGBD compatível com Laravel)
+* **Frontend:** Blade Templates (padrão do Laravel)
+* **Gerenciador de Dependências:** Composer
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## 3. Estrutura do Projeto
 
-## Learning Laravel
+A estrutura segue o padrão do Laravel, com os principais componentes localizados nos seguintes diretórios:
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+* `app/Http/Controllers/`: Contém os controladores que gerenciam a lógica das requisições.
+    * `ClienteController.php`
+    * `ContatoController.php`
+    * `FornecedorController.php`
+    * `ProdutoController.php`
+    * `HomeController.php`
+* `app/Models/`: Contém os modelos que interagem com o banco de dados.
+    * `Cliente.php`
+    * `Contato.php`
+    * `Fornecedor.php`
+    * `Produto.php`
+    * `User.php`
+* `resources/views/`: Contém os arquivos de template (telas do sistema).
+    * `cliente.blade.php`
+    * `contato.blade.php`
+    * `fornecedor.blade.php`
+    * `produto.blade.php`
+    * `home.blade.php`
+* `routes/`: Contém os arquivos de definição de rotas.
+    * `web.php`: Rotas para a aplicação web.
+    * `api.php`: Rotas para a API.
+* `database/migrations/`: Contém as migrações para a criação das tabelas do banco de dados.
+* `public/`: Diretório público, ponto de entrada da aplicação.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## 4. Funcionalidades
 
-## Laravel Sponsors
+O sistema possui as seguintes funcionalidades principais:
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+### 4.1. Gerenciamento de Clientes
 
-### Premium Partners
+* **Rota:** `/cliente`
+* **Controlador:** `ClienteController`
+* **View:** `cliente.blade.php`
+* **Descrição:** Permite o cadastro e, presumivelmente, a listagem e gerenciamento de clientes do sistema.
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+### 4.2. Gerenciamento de Produtos
 
-## Contributing
+* **Rota:** `/produto`
+* **Controlador:** `ProdutoController`
+* **View:** `produto.blade.php`
+* **Descrição:** Permite o cadastro e gerenciamento de produtos da loja.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+### 4.3. Gerenciamento de Fornecedores
 
-## Code of Conduct
+* **Rota:** `/fornecedor`
+* **Controlador:** `FornecedorController`
+* **View:** `fornecedor.blade.php`
+* **Descrição:** Permite o cadastro e gerenciamento de fornecedores de produtos.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+### 4.4. Formulário de Contato
 
-## Security Vulnerabilities
+* **Rota:** `/contato`
+* **Controlador:** `ContatoController`
+* **View:** `contato.blade.php`
+* **Descrição:** Uma página com um formulário para que os visitantes possam enviar mensagens. Os dados são salvos no banco de dados.
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+## 5. Banco de Dados
 
-## License
+A estrutura do banco de dados está definida no arquivo `codigo_banco.txt` e pode ser replicada usando as *migrations* do Laravel. As principais tabelas são:
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+* **`tbCliente`**: Armazena as informações dos clientes.
+    * `idCliente` (Chave Primária)
+    * `nomeCliente`
+    * `cpfCliente`
+    * `emailCliente`
+    * ... (outros campos relevantes)
+* **`tbProduto`**: Armazena as informações dos produtos.
+    * `idProduto` (Chave Primária)
+    * `nomeProduto`
+    * `valorProduto`
+    * `idCategoria` (Chave Estrangeira para `tbCategoria`)
+    * ... (outros campos relevantes)
+* **`tbContato`**: Armazena as mensagens enviadas pelo formulário de contato.
+    * `idContato` (Chave Primária)
+    * `nomeContato`
+    * `emailContato`
+    * `assuntoContato`
+    * `msgContato`
+* **`tbCategoria`**: Armazena as categorias dos produtos.
+    * `idCategoria` (Chave Primária)
+    * `nomeCategoria`
+
+## 6. Rotas (Endpoints)
+
+### 6.1. Rotas Web (`routes/web.php`)
+
+| Verbo | URI | Ação | Nome da Rota |
+| :--- | :--- | :--- | :--- |
+| `GET` | `/` | `HomeController@index` | `home` |
+| `GET` | `/contato` | `ContatoController@index` | `contato` |
+| `GET` | `/cliente` | `ClienteController@index` | `cliente` |
+| `GET` | `/fornecedor` | `FornecedorController@index` | `fornecedor` |
+| `GET` | `/produto` | `ProdutoController@index` | `produto` |
+
+### 6.2. Rotas de API (`routes/api.php`)
+
+| Verbo | URI | Ação |
+| :--- | :--- | :--- |
+| `POST` | `/contato` | `ContatoController@store` |
+
+## 7. Como Executar o Projeto
+
+Para configurar e executar o projeto em um ambiente de desenvolvimento local, siga os passos abaixo:
+
+1.  **Clonar o Repositório**
+    ```bash
+    git clone [https://github.com/SEU-USUARIO/pixelverse.git](https://github.com/SEU-USUARIO/pixelverse.git)
+    cd pixelverse
+    ```
+
+2.  **Instalar Dependências**
+    ```bash
+    composer install
+    ```
+
+3.  **Configurar Variáveis de Ambiente**
+    * Copie o arquivo `.env.example` para `.env`.
+    * Configure as variáveis de conexão com o banco de dados (`DB_HOST`, `DB_PORT`, `DB_DATABASE`, `DB_USERNAME`, `DB_PASSWORD`).
+    ```bash
+    cp .env.example .env
+    php artisan key:generate
+    ```
+
+4.  **Executar as Migrations**
+    * Este comando criará as tabelas no banco de dados.
+    ```bash
+    php artisan migrate
+    ```
+
+5.  **Iniciar o Servidor de Desenvolvimento**
+    ```bash
+    php artisan serve
+    ```
+
+6.  Acesse a aplicação em seu navegador no endereço: `http://127.0.0.1:8000`.
