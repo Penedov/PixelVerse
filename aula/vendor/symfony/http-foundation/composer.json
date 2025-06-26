@@ -1,0 +1,14 @@
+d {Alle Registerkarten wurden der Sammlung $1 hinzugefügt}
+          other {Diese Registerkarten können der Sammlung $1 nicht hinzugefügt werden}}{TABS_VALID, select,
+          valid {Alle Tabs zu einer neuen Sammlung aus der Tab-Gruppe $1 hinzugefügt}
+          other {Die Tabs aus der Tab-Gruppe $1 können nicht zu einer Sammlung hinzugefügt werden}}Aktuelle Seite zur Sammlung hinzugefügtZu $1 hinzugefügt, drücken Sie STRG+UMSCHALT+Y, um die Sammlung anzuzeigen, oder drücken Sie ESC zum Schließen.Die freigegebene Sammlung wurde zu Ihren Sammlungen hinzugefügt.Ihrer Sammlung wird eine PDF-Registerkarte hinzugefügt.Element in Sammlung eingefügtSammlungsbereich geschlossenDer Seitenbereich zeigt jetzt Sammlungen an.Die Sammlung $1 wurde aktualisiert.{NUM_TABS, plural,
+          =1 {Tab wird geschlossen}
+          one {Tabs werden geschlossen}
+          other {Tabs werden geschlossen}}{NUM_TABS, plural,
+          =1 {Registerkarte wird als gelesen markiert}
+          one {Registerkarten werden als gelesen markiert}
+          other {Registerkarten werden als gelesen markiert}}{NUM_TABS, plural,
+          =1 {Registerkarte wird gesperrt}
+          one {Registerkarten werden gesperrt}
+          other {Registerkarten werden gesperrt}}{NUM_TABS, plural,
+          =1 {Registerkarte wird entsperrt}
